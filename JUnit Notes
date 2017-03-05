@@ -3,3 +3,37 @@ JUnit Notes
 
 Chapter 1 - Introduction
 ========================
+*	Find problems early on, and to run tests immediately.
+*	Achieves stakeholder goals
+*	Meets functional requirements
+*	Correctly handles corner cases
+*	Performance
+*	Usability
+
+We remove fear of change.  Deliver reliability and quality.
+
+System hierarchy = a) Unit tests test a single function (fast, but brittle) 
+				   b) Aggregate (slower to run, less brittle 
+				   c) System testing - longest to run, end-to-end testing
+
+Chapter 2 - Testing Code
+========================
+
+
+
+Chapter 3 - TDD Test Driven Development
+=======================================
+
+
+Chapter 4 - Building Classes from Tests
+=======================================
+
+
+
+Chapter 5 - Dependencies 
+========================
+
+
+
+Chapter 6 - Going outside-in
+============================
