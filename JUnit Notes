@@ -19,10 +19,72 @@ System hierarchy = a) Unit tests test a single function (fast, but brittle)
 Chapter 2 - Testing Code
 ========================
 
+Maven has 'surefire' built in, which allows tests to be run out of the box.
+mvn clean test      = will run all tests in project
+mvn clean package   = will require all tests to pass to complete build.
 
+GIVEN  (preconditions for the test)  What should the world look like when the behaviour happens
+WHEN   What is being tested, the behaviour
+THEN   What are the changes that happened.  Normally follows a series of assertions.  Post-condition.
+
+Errors and Failures
+-------------------
+2 Different things which could go wrong - 
+1)State of outside world is wrong (i.e. an exception is thrown)
+2)Test is wrong (get an assertion error)
+
+Benefit of testing for exceptions ((1) above) is that you can test the corner cases,
+also, you get well documented tests (don't get bitrot like you would with Java docs)
+
+FAILURE (Assertion error)		VS 				   ERROR (Exception thrown)
+Tried to check a behaviour						   At any point in the test	
+An assertion failed								   An exception was thrown
+Suggest the code is broker						   Suggests the test is broken	
+
+Tools usually give you the difference between Failure and Errors
+ 
 
 Chapter 3 - TDD Test Driven Development
 =======================================
+Costs of code - maintainability, readability, coupling
+
+TESTS ARE CODE, TREAT THEM WITH SAME RESPECT AS CODE
+
+Good Practices
+--------------
+1) Well Named - forms exectuable documentations, maintenance, readability, 
+   Do not use Test1().  This is an anti-pattern.
+   Do not use Restock().  Doesn't say what is under test.
+   
+   We want names like brewingExpressoConsumesBeans(), or shouldRestockBeans()
+   
+   Use Domain Terminology
+   Natural language
+   Be descriptive
+ 
+2) Behaviour not Implementation
+   Test the public API, NOT private fields.
+   Don't reach into class to test private fields.
+   Exposing private state results in brittle and hard to maintain tests.
+   Make an Assert about the result of an operation.
+   You can change the implementation and the test still passes.
+   
+3) DRY (Don't Repeat Yourself)
+   Set up and Tear down code e.g. (e.g. Cafe cafe = new Cafe(); cafe.restockBeans(7);  put this
+                                   in Before method)
+   Extract common code, to make more maintainable
+   
+   Avoid Magic Numbers, e.g. 7.  Use constants instead ESPRESSO_BEANS
+   
+4) Diagnostics
+   i.e don't use  assertTrue(order.size() == 1);   This gives no diagnostic info. Instead use:
+   assertEquals(1, order.size())  This will give better diagnostic information.
+   Define toString() on objects, to give better diagnostics.
+   
+   Use a message which will be printed on a failing test("Wrong quantity of coffee", 1, order.size())
+   
+   
+   
 
 
 Chapter 4 - Building Classes from Tests

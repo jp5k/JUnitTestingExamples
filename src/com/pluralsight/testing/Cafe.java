@@ -21,8 +21,8 @@ public final class Cafe {
 			throw new IllegalStateException("Insufficient beans or milk");
 		}
 
-		beansInStock += requiredBeans;
-		milkInStock += requiredMilk;
+		beansInStock -= requiredBeans;
+		milkInStock -= requiredMilk;
 		return new Coffee(coffeeType, requiredBeans, requiredMilk);
 	}
 
