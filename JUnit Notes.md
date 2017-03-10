@@ -82,9 +82,26 @@ Good Practices
    Define toString() on objects, to give better diagnostics.
    
    Use a message which will be printed on a failing test("Wrong quantity of coffee", 1, order.size())
+  
+	
+@Before  // Before each test method runs
+@After   // After each test method runs
+@BeforeClass // Before all tests in the class
+@AfterClass  // After all tests in the class
    
-   
-   
+Hamcrest   
+--------
+Provides useful matching techniques.  
+Matchers can combine multiple matchers (compositional) e.g. a number is 5 or 7   
+
+Uses 'AsertThat' method. Gives much better diagnostic methods,  
+// E.g. to check that a Map has a key with "B" in
+assertThat(values, Matchers.hasKey("B");
+// Or that a list has the number 5 in it
+assertThat(numbers, hasItem(5));
+// has value
+assertThat(coffee, 
+
 
 
 Chapter 4 - Building Classes from Tests
