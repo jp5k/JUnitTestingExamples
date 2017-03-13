@@ -99,13 +99,20 @@ Uses 'AsertThat' method. Gives much better diagnostic methods,
 assertThat(values, Matchers.hasKey("B");
 // Or that a list has the number 5 in it
 assertThat(numbers, hasItem(5));
-// has value
-assertThat(coffee, 
-
-
-
+// Also allows composites.  Here, allow value, and also have correct beans.
+Assert.assertThat(coffee,
+				Matchers.hasProperty("beans", Matchers.equalTo(ESPRESSO_BEANS)));
+			
+			
 Chapter 4 - Building Classes from Tests
 =======================================
+
+*	Use tests to drive well designed software
+*	Write tests before implementation
+*	Always implement things when you actually need them, never when you forsee you need them.
+*	Incremental production of well designed and well tested code
+*	See Leap Year test for how to drive development.  Failing test, then passing test, refactor code.
+		
 
 
 
