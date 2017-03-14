@@ -113,7 +113,7 @@ Chapter 4 - Building Classes from Tests
 *	Incremental production of well designed and well tested code
 *	See Leap Year test for how to drive development.  Failing test, then passing test, refactor code.
 		
-
+Triangulation - take a few examples, and then try to generalise using these examples.  
 
 
 Chapter 5 - Dependencies 
