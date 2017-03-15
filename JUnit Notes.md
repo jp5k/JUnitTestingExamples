@@ -118,6 +118,16 @@ Triangulation - take a few examples, and then try to generalise using these exam
 
 Chapter 5 - Dependencies 
 ========================
+A relationship between two components where functionality of one component relies on the other.
+
+Sales reports examples in the code.
+We want test isolation (e.g. testanalysis service needs to be tested on its own)
+Classes new up dependencies, highly coupled
+
+Dependency Injection - a way of resolving test isolation and high coupling.  
+Need to de-couple our components. 
+Constructor argument is taken which allows for dependency injection.  This allows, for example,
+a SQL database to be used instead of a csvRepository database.
 
 
 
