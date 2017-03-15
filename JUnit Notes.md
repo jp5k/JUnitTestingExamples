@@ -129,6 +129,28 @@ Need to de-couple our components.
 Constructor argument is taken which allows for dependency injection.  This allows, for example,
 a SQL database to be used instead of a csvRepository database.
 
+Test Doubles
+------------
+Like a crash dummy, same API as the real thing, but much simpler internally
+
+Types of Test Double are:
+Fake / Stub / Mock
+
+Fake - working implementation, but much simpler than real one
+Example: In memory database (like Derby)
+
+Stub - A ready made answer to method calls.  Only what is required
+for a test.
+Example: size() always returns 1
+
+Mocks - Tests the interactions with the object.  May also stub out 
+return values.  
+Example: must invoke size() once  (sets out expectations with the case under test).
+
+ 
+
+
+
 
 
 Chapter 6 - Going outside-in
