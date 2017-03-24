@@ -14,7 +14,7 @@ public class SalesRepositoryTest
     @Test
     public void shouldLoadSampleData()
     {
-        SalesRepository repository = new SalesRepository("resources/example-sales.csv");
+        SalesRepository repository = new SalesRepository("/resources/example-sales.csv");
 
         List<Sale> sales = repository.loadSales();
 

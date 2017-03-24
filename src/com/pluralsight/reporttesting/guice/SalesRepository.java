@@ -1,4 +1,5 @@
-package com.monotonic.testing.m5.guice;
+package com.pluralsight.reporttesting.guice;
+
 
 import java.util.List;
 

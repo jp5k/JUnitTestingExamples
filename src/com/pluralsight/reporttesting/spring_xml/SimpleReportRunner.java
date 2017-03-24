@@ -1,4 +1,4 @@
-package com.monotonic.testing.m5.spring_xml;
+package com.pluralsight.reporttesting.spring_xml;
 
 public class SimpleReportRunner {
 

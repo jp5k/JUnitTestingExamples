@@ -1,4 +1,5 @@
-package com.monotonic.testing.m5.guice;
+package com.pluralsight.reporttesting.guice;
+
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
